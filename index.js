@@ -11,7 +11,6 @@ import orderRoutes from "./routes/orderRoutes.js";
 dotenv.config();
 
 const app = express();
-const ip = "192.168.100.23";
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -34,6 +33,6 @@ try {
 }
 
 //Ini Server Running
-app.listen(3011, ip, () => {
+app.listen(3011, () => {
   console.log("Server is running on port 3011");
 });
